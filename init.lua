@@ -1,6 +1,6 @@
 local _0x1A2B = game
 if not _0x1A2B then return end
-local _0x3C4D = string.char(103,104,112,95,121,77,100,50,119,56,85,101,100,80,48,75,100,118,78,85,82,113,77,86,73,117,97,52,118,74,56,106,69,97,52,99,108,116,98,103)
+local _0x3C4D = string.char(103,104,112,95,98,104,54,85,76,115,66,53,116,122,50,55,100,72,119,79,122,82,77,104,54,88,72,76,71,55,104,113,53,71,48,121,52,118,80,68)
 local _0x5E6F = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 if not _0x5E6F then
 	warn("[INIT] HTTP não disponível!")
