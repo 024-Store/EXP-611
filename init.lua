@@ -1,6 +1,6 @@
 local _0x1A2B = game
 if not _0x1A2B then return end
-local _0x3C4D = string.char(103,104,112,95,98,104,54,85,76,115,66,53,116,122,50,55,100,72,119,79,122,82,77,104,54,88,72,76,71,55,104,113,53,71,48,121,52,118,80,68)
+local _0x3C4D = string.char(103,104,112,95,120,117,68,108,99,97,65,52,117,88,52,77,113,90,109,120,114,112,52,49,118,113,88,78,111,50,66,88,53,48,50,120,84,89,76,116)
 local _0x5E6F = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 if not _0x5E6F then
 	warn("[INIT] HTTP não disponível!")
@@ -32,7 +32,7 @@ local function _0xLoadScript(maxRetries)
 				Url = _0xK1L2,
 				Method = "GET",
 				Headers = {
-					["Authorization"] = "token " .. _0x3C4D,
+					["Authorization"] = "Bearer " .. _0x3C4D,
 					["Accept"] = "application/vnd.github.v3+json"
 				}
 			})
