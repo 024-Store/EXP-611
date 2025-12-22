@@ -1,6 +1,6 @@
 local _0x1A2B = game
 if not _0x1A2B then return end
-local _0x3C4D = "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"
+local _0x3C4D = "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"
 local _0x5E6F = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 if not _0x5E6F then
 	warn("[INIT] HTTP não disponível!")
@@ -28,7 +28,7 @@ local _0xM3N4, _0xO5P6 = pcall(function()
 		Url = _0xK1L2,
 		Method = "GET",
 		Headers = {
-			["Authorization"] = "Bearer " .. _0x3C4D,
+			["Authorization"] = "token " .. _0x3C4D,
 			["Accept"] = "application/vnd.github.v3+json"
 		}
 	})
