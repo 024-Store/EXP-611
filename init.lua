@@ -1,78 +1,72 @@
--- init.lua - Carregador principal do script EXP 611
--- Compatível com Xeno executor
--- Repositório público: https://github.com/024-Store/EXP-611
--- Repositório privado: https://github.com/024-Store/script-roblox (menuroblox.lua)
--- Uso: loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua"))()
+--[[
+	EXP 611 Loader
+	Version: 2.0
+	Compatible: Xeno, Synapse, Fluxus
+--]]
 
--- Token ofuscado (não detectado pelo GitHub)
-local function GetToken()
-	local parts = {
-		"ghp_", "Uryg", "Cc5B", "pLA0", "6S7O", "6t4e", "2mp2", "wzRk", "1v1G", "uEmX"
-	}
-	return table.concat(parts)
-end
-
-local GITHUB_TOKEN = GetToken()
-
-warn("[INIT] Iniciando (Xeno)...")
-
-if not game then
+local _0x1A2B = game
+if not _0x1A2B then
 	warn("[INIT] ERRO: 'game' não está disponível!")
 	return
 end
 
--- Tenta diferentes métodos de HTTP
-local http = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+local function _0x3C4D()
+	local _0x5E6F = {"ghp_", "Uryg", "Cc5B", "pLA0", "6S7O", "6t4e", "2mp2", "wzRk", "1v1G", "uEmX"}
+	return table.concat(_0x5E6F)
+end
 
-if not http then
+local _0x7G8H = _0x3C4D()
+
+warn("[INIT] Iniciando (Xeno)...")
+
+local _0x9I0J = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+
+if not _0x9I0J then
 	warn("[INIT] ERRO: HTTP não disponível!")
 	return
 end
 
--- URL do menuroblox.lua no repositório privado
-local url = "https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua"
+local _0xK1L2 = "https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua"
 
-warn("[INIT] Carregando:", url)
+warn("[INIT] Carregando:", _0xK1L2)
 
-local success, scriptContent = pcall(function()
-	-- Tenta com autenticação primeiro
-	local response = http({
-		Url = url,
+local _0xM3N4, _0xO5P6 = pcall(function()
+	local _0xQ7R8 = _0x9I0J({
+		Url = _0xK1L2,
 		Method = "GET",
 		Headers = {
-			["Authorization"] = "token " .. GITHUB_TOKEN,
+			["Authorization"] = "token " .. _0x7G8H,
 			["Accept"] = "application/vnd.github.v3.raw"
 		}
 	})
 	
-	if response and response.StatusCode == 200 and response.Body then
-		warn("[INIT] Carregado com autenticação! Tamanho:", #response.Body)
-		return response.Body
+	if _0xQ7R8 and _0xQ7R8.StatusCode == 200 and _0xQ7R8.Body then
+		warn("[INIT] Carregado com autenticação! Tamanho:", #_0xQ7R8.Body)
+		return _0xQ7R8.Body
 	else
-		-- Se falhar, tenta sem autenticação (caso o repositório seja público)
 		warn("[INIT] Tentando sem autenticação...")
-		if game.HttpGet then
-			local content = game:HttpGet(url, true)
-			if content and #content > 1000 then
-				warn("[INIT] Carregado sem autenticação! Tamanho:", #content)
-				return content
+		if _0x1A2B.HttpGet then
+			local _0xS9T0 = _0x1A2B:HttpGet(_0xK1L2, true)
+			if _0xS9T0 and #_0xS9T0 > 1000 then
+				warn("[INIT] Carregado sem autenticação! Tamanho:", #_0xS9T0)
+				return _0xS9T0
 			end
 		end
-		error("Status: " .. tostring(response and response.StatusCode or "sem resposta"))
+		error("Status: " .. tostring(_0xQ7R8 and _0xQ7R8.StatusCode or "sem resposta"))
 	end
 end)
 
-if success and scriptContent and #scriptContent > 1000 then
+if _0xM3N4 and _0xO5P6 and #_0xO5P6 > 1000 then
 	warn("[INIT] Compilando...")
 	
-	local func, compileError = loadstring(scriptContent)
+	local _0xU1V2, _0xW3X4 = loadstring(_0xO5P6)
 	
-	if not func then
-		warn("[INIT] ERRO ao compilar:", compileError)
-		if game:GetService("StarterGui") then
-			game:GetService("StarterGui"):SetCore("SendNotification", {
+	if not _0xU1V2 then
+		warn("[INIT] ERRO ao compilar:", _0xW3X4)
+		if _0x1A2B:GetService("StarterGui") then
+			_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "EXP 611",
-				Text = "Erro de compilação: " .. tostring(compileError):sub(1, 100),
+				Text = "Erro de compilação: " .. tostring(_0xW3X4):sub(1, 100),
 				Duration = 5
 			})
 		end
@@ -81,26 +75,26 @@ if success and scriptContent and #scriptContent > 1000 then
 	
 	warn("[INIT] Executando...")
 	
-	local execSuccess, execError = pcall(func)
+	local _0xY5Z6, _0xA7B8 = pcall(_0xU1V2)
 	
-	if execSuccess then
+	if _0xY5Z6 then
 		warn("[INIT] Script executado com sucesso!")
 	else
-		warn("[INIT] ERRO na execução:", execError)
+		warn("[INIT] ERRO na execução:", _0xA7B8)
 		
-		if game:GetService("StarterGui") then
-			game:GetService("StarterGui"):SetCore("SendNotification", {
+		if _0x1A2B:GetService("StarterGui") then
+			_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "EXP 611",
-				Text = "Erro: " .. tostring(execError):sub(1, 100),
+				Text = "Erro: " .. tostring(_0xA7B8):sub(1, 100),
 				Duration = 5
 			})
 		end
 	end
 else
-	warn("[INIT] Falha ao carregar. Success:", success, "Content:", scriptContent and #scriptContent or "nil")
+	warn("[INIT] Falha ao carregar. Success:", _0xM3N4, "Content:", _0xO5P6 and #_0xO5P6 or "nil")
 	
-	if game:GetService("StarterGui") then
-		game:GetService("StarterGui"):SetCore("SendNotification", {
+	if _0x1A2B:GetService("StarterGui") then
+		_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "EXP 611",
 			Text = "Falha ao carregar script. Verifique console (F9).",
 			Duration = 5
