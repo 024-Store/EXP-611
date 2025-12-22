@@ -23,35 +23,64 @@ local function _0x7G8H(data)
 end
 local _0xK1L2 = "https://api.github.com/repos/024-Store/script-roblox/contents/menuroblox.lua"
 warn("[INIT] Carregando via API GitHub...")
-local _0xM3N4, _0xO5P6 = pcall(function()
-	local _0xQ7R8 = _0x5E6F({
-		Url = _0xK1L2,
-		Method = "GET",
-		Headers = {
-			["Authorization"] = "token " .. _0x3C4D,
-			["Accept"] = "application/vnd.github.v3+json"
-		}
-	})
-	warn("[INIT] Status:", _0xQ7R8 and _0xQ7R8.StatusCode or "nil")
-	if _0xQ7R8 and _0xQ7R8.StatusCode == 200 and _0xQ7R8.Body then
-		local _0xS9T0 = _0x1A2B:GetService("HttpService")
-		local _0xU1V2, _0xW3X4 = pcall(function()
-			return _0xS9T0:JSONDecode(_0xQ7R8.Body)
-		end)
-		if _0xU1V2 and _0xW3X4 and _0xW3X4.content then
-			local _0xY5Z6 = _0xW3X4.content:gsub("%s", "")
-			local _0xA7B8 = _0x7G8H(_0xY5Z6)
-			if _0xA7B8 and #_0xA7B8 > 1000 then
-				warn("[INIT] Sucesso! Tamanho:", #_0xA7B8)
-				return _0xA7B8
+local function _0xLoadScript(maxRetries)
+	maxRetries = maxRetries or 3
+	local retryCount = 0
+	while retryCount < maxRetries do
+		local _0xM3N4, _0xO5P6 = pcall(function()
+			local _0xQ7R8 = _0x5E6F({
+				Url = _0xK1L2,
+				Method = "GET",
+				Headers = {
+					["Authorization"] = "token " .. _0x3C4D,
+					["Accept"] = "application/vnd.github.v3+json"
+				}
+			})
+			warn("[INIT] Status:", _0xQ7R8 and _0xQ7R8.StatusCode or "nil")
+			if _0xQ7R8 and _0xQ7R8.StatusCode == 200 and _0xQ7R8.Body then
+				local _0xS9T0 = _0x1A2B:GetService("HttpService")
+				local _0xU1V2, _0xW3X4 = pcall(function()
+					return _0xS9T0:JSONDecode(_0xQ7R8.Body)
+				end)
+				if _0xU1V2 and _0xW3X4 and _0xW3X4.content then
+					local _0xY5Z6 = _0xW3X4.content:gsub("%s", "")
+					local _0xA7B8 = _0x7G8H(_0xY5Z6)
+					if _0xA7B8 and #_0xA7B8 > 1000 then
+						warn("[INIT] Sucesso! Tamanho:", #_0xA7B8)
+						return _0xA7B8
+					end
+				end
+			elseif _0xQ7R8 and _0xQ7R8.StatusCode == 403 then
+				-- Rate limit excedido - aguardar e tentar novamente
+				warn("[INIT] Rate limit excedido. Aguardando 60 segundos...")
+				if _0x1A2B:GetService("StarterGui") then
+					_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {
+						Title = "EXP 611",
+						Text = "Rate limit excedido. Aguardando...",
+						Duration = 5
+					})
+				end
+				wait(60)
+				retryCount = retryCount + 1
+				return nil
 			end
+			local status = _0xQ7R8 and _0xQ7R8.StatusCode or "sem resposta"
+			local body = _0xQ7R8 and _0xQ7R8.Body or "sem body"
+			warn("[INIT] Erro. Status:", status, "Body:", tostring(body):sub(1, 200))
+			error("Erro ao carregar. Status: " .. tostring(status))
+		end)
+		if _0xM3N4 and _0xO5P6 and #_0xO5P6 > 1000 then
+			return _0xO5P6
+		elseif retryCount < maxRetries then
+			retryCount = retryCount + 1
+			warn("[INIT] Tentativa", retryCount, "de", maxRetries)
+		else
+			return nil
 		end
 	end
-	local status = _0xQ7R8 and _0xQ7R8.StatusCode or "sem resposta"
-	local body = _0xQ7R8 and _0xQ7R8.Body or "sem body"
-	warn("[INIT] Erro. Status:", status, "Body:", tostring(body):sub(1, 200))
-	error("Erro ao carregar. Status: " .. tostring(status))
-end)
+	return nil
+end
+local _0xM3N4, _0xO5P6 = pcall(_0xLoadScript)
 if _0xM3N4 and _0xO5P6 and #_0xO5P6 > 1000 then
 	warn("[INIT] Compilando...")
 	local _0xC9D0, _0xE1F2 = loadstring(_0xO5P6)
