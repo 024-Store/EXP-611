@@ -1,7 +1,8 @@
 -- init.lua - Carregador principal do script EXP 611
 -- Compatível com Xeno executor
--- Para repositório privado do GitHub
--- Pode ser carregado via: loadstring(game:HttpGet("URL_DO_INIT_LUA"))()
+-- Repositório público: https://github.com/024-Store/EXP-611
+-- Repositório privado: https://github.com/024-Store/script-roblox (menuroblox.lua)
+-- Uso: loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua"))()
 
 -- Token ofuscado (não detectado pelo GitHub)
 local function GetToken()
@@ -28,6 +29,7 @@ if not http then
 	return
 end
 
+-- URL do menuroblox.lua no repositório privado
 local url = "https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua"
 
 warn("[INIT] Carregando:", url)
