@@ -1,1 +1,338 @@
-[{"userName":"JuanJulio26","tagColor":[255,0,0],"iconId":75165210157435,"timestamp":1766956066,"userId":261707832,"tagName":"Dono"},{"userName":"joaogabrimont","tagColor":[255,255,255],"tagName":"User","timestamp":1766465724,"userId":2450410208,"iconId":75165210157435},{"userName":"Franciscogamer0431","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766467226,"userId":7115456429,"tagName":"User"},{"userName":"Rafaa90x","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766472756,"userId":4111134349,"tagName":"User"},{"userName":"Joaozinlx79","tagColor":[255,255,255],"tagName":"User","timestamp":1766509634,"userId":4949350330,"iconId":75165210157435},{"userName":"t599","tagColor":[255,255,255],"tagName":"User","timestamp":1766514779,"userId":1551369,"iconId":75165210157435},{"userName":"laura00623","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766515144,"userId":1077085721,"tagName":"User"},{"userName":"jeienwuabio","tagColor":[255,255,255],"tagName":"User","timestamp":1766516957,"userId":5378305747,"iconId":75165210157435},{"userName":"zombieqz12","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766519210,"userId":9963456568,"tagName":"User"},{"userName":"Samukaghost78","tagColor":[255,255,255],"tagName":"User","timestamp":1766528483,"userId":4194838166,"iconId":75165210157435},{"userName":"EZSOLA","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766531913,"userId":3946938851,"tagName":"User"},{"userName":"Snel1712","tagColor":[255,255,255],"tagName":"User","timestamp":1766536711,"userId":78457991,"iconId":75165210157435},{"userName":"soubasedsigma","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766578495,"userId":9914555872,"tagName":"User"},{"userName":"EZ_noobs24491","tagColor":[255,255,255],"tagName":"User","timestamp":1766602306,"userId":9249009785,"iconId":75165210157435},{"userName":"Lovpakz","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766606689,"userId":7798701646,"tagName":"User"},{"userName":"Lucas_HypeI","tagColor":[255,255,255],"tagName":"User","timestamp":1766607564,"userId":4046021006,"iconId":75165210157435},{"userName":"phyclefeede6f","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766620318,"userId":6072490992,"tagName":"User"},{"userName":"waso","tagColor":[255,255,255],"tagName":"User","timestamp":1766628714,"userId":487970,"iconId":75165210157435},{"userName":"youibyb","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766631097,"userId":4539227910,"tagName":"User"},{"userName":"z56","tagColor":[255,255,255],"tagName":"User","timestamp":1766652702,"userId":6534496,"iconId":75165210157435},{"userName":"fofoefeliz3","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766662680,"userId":7934255421,"tagName":"User"},{"userName":"plurpedro12","tagColor":[255,255,255],"tagName":"User","timestamp":1766675396,"userId":8042552484,"iconId":75165210157435},{"userName":"apsenceisope","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766696321,"userId":7916883736,"tagName":"User"},{"userName":"chamaomoicu","tagColor":[255,255,255],"tagName":"User","timestamp":1766696491,"userId":9126108371,"iconId":75165210157435},{"userName":"fxminato29","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766700611,"userId":2498224966,"tagName":"User"},{"userName":"satanastepersegue","tagColor":[255,255,255],"tagName":"User","timestamp":1766704878,"userId":10109995672,"iconId":75165210157435},{"userName":"LucasZone650","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766707595,"userId":237036614,"tagName":"User"},{"userName":"KroZz_Jp","tagColor":[255,255,255],"tagName":"User","timestamp":1766715692,"userId":12368548,"iconId":75165210157435},{"userName":"Ultra_Machistakk","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766716145,"userId":7799391235,"tagName":"User"},{"userName":"Horimiyalk","tagColor":[255,255,255],"tagName":"User","timestamp":1766716296,"userId":92228235,"iconId":75165210157435},{"userName":"venomblessed","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766722640,"userId":5158719569,"tagName":"User"},{"userName":"Henrique2wolfgg","tagColor":[255,255,255],"tagName":"User","timestamp":1766723892,"userId":4490690569,"iconId":75165210157435},{"userName":"muitocrucial","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766728842,"userId":908784808,"tagName":"User"},{"userName":"drizzy_587","tagColor":[255,255,255],"tagName":"User","timestamp":1766730061,"userId":4844861473,"iconId":75165210157435},{"userName":"viinicius007","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766765845,"userId":2434491505,"tagName":"User"},{"userName":"EitaMafeYT","tagColor":[255,255,255],"tagName":"User","timestamp":1766790524,"userId":549409774,"iconId":75165210157435},{"userName":"gustavo2703207","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766794767,"userId":1065216529,"tagName":"User"},{"userName":"tutudograurodo1","tagColor":[255,255,255],"tagName":"User","timestamp":1766869595,"userId":7973436657,"iconId":75165210157435},{"userName":"sufocatemysoul","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766881327,"userId":1512958223,"tagName":"User"},{"userName":"guaxilm","tagColor":[255,255,255],"tagName":"User","timestamp":1766893291,"userId":3452109815,"iconId":75165210157435},{"userName":"vvempraluz","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1766918094,"userId":3393164978,"tagName":"User"},{"userName":"FoxGamerReal","tagColor":[255,255,255],"tagName":"User","timestamp":1766918438,"userId":661560917,"iconId":75165210157435}]
+[
+  {
+    "userId": 487970,
+    "userName": "waso",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766628714
+  },
+  {
+    "userId": 1551369,
+    "userName": "t599",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766514779
+  },
+  {
+    "userId": 6534496,
+    "userName": "z56",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766652702
+  },
+  {
+    "userId": 12368548,
+    "userName": "KroZz_Jp",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766715692
+  },
+  {
+    "userId": 78457991,
+    "userName": "Snel1712",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766536711
+  },
+  {
+    "userId": 92228235,
+    "userName": "Horimiyalk",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766716296
+  },
+  {
+    "userId": 237036614,
+    "userName": "LucasZone650",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766707595
+  },
+  {
+    "userId": 261707832,
+    "userName": "JuanJulio26",
+    "tagName": "Dono",
+    "tagColor": [255, 0, 0],
+    "iconId": 75165210157435,
+    "timestamp": 1766956066
+  },
+  {
+    "userId": 549409774,
+    "userName": "EitaMafeYT",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766790524
+  },
+  {
+    "userId": 661560917,
+    "userName": "FoxGamerReal",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766918438
+  },
+  {
+    "userId": 908784808,
+    "userName": "muitocrucial",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766728842
+  },
+  {
+    "userId": 1065216529,
+    "userName": "gustavo2703207",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766794767
+  },
+  {
+    "userId": 1077085721,
+    "userName": "laura00623",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766515144
+  },
+  {
+    "userId": 1512958223,
+    "userName": "sufocatemysoul",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766881327
+  },
+  {
+    "userId": 2434491505,
+    "userName": "viinicius007",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766765845
+  },
+  {
+    "userId": 2450410208,
+    "userName": "joaogabrimont",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766465724
+  },
+  {
+    "userId": 2498224966,
+    "userName": "fxminato29",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766700611
+  },
+  {
+    "userId": 3393164978,
+    "userName": "vvempraluz",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766918094
+  },
+  {
+    "userId": 3452109815,
+    "userName": "guaxilm",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766893291
+  },
+  {
+    "userId": 3946938851,
+    "userName": "EZSOLA",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766531913
+  },
+  {
+    "userId": 4046021006,
+    "userName": "Lucas_HypeI",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766607564
+  },
+  {
+    "userId": 4111134349,
+    "userName": "Rafaa90x",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766472756
+  },
+  {
+    "userId": 4194838166,
+    "userName": "Samukaghost78",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766528483
+  },
+  {
+    "userId": 4490690569,
+    "userName": "Henrique2wolfgg",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766723892
+  },
+  {
+    "userId": 4539227910,
+    "userName": "youibyb",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766631097
+  },
+  {
+    "userId": 4844861473,
+    "userName": "drizzy_587",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766730061
+  },
+  {
+    "userId": 4949350330,
+    "userName": "Joaozinlx79",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766509634
+  },
+  {
+    "userId": 5158719569,
+    "userName": "venomblessed",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766722640
+  },
+  {
+    "userId": 5378305747,
+    "userName": "jeienwuabio",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766516957
+  },
+  {
+    "userId": 6072490992,
+    "userName": "phyclefeede6f",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766620318
+  },
+  {
+    "userId": 7115456429,
+    "userName": "Franciscogamer0431",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766467226
+  },
+  {
+    "userId": 7798701646,
+    "userName": "Lovpakz",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766606689
+  },
+  {
+    "userId": 7799391235,
+    "userName": "Ultra_Machistakk",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766716145
+  },
+  {
+    "userId": 7916883736,
+    "userName": "apsenceisope",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766696321
+  },
+  {
+    "userId": 7934255421,
+    "userName": "fofoefeliz3",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766662680
+  },
+  {
+    "userId": 7973436657,
+    "userName": "tutudograurodo1",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766869595
+  },
+  {
+    "userId": 8042552484,
+    "userName": "plurpedro12",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766675396
+  },
+  {
+    "userId": 9126108371,
+    "userName": "chamaomoicu",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766696491
+  },
+  {
+    "userId": 9249009785,
+    "userName": "EZ_noobs24491",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766602306
+  },
+  {
+    "userId": 9914555872,
+    "userName": "soubasedsigma",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766578495
+  },
+  {
+    "userId": 9963456568,
+    "userName": "zombieqz12",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766519210
+  },
+  {
+    "userId": 10109995672,
+    "userName": "satanastepersegue",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1766704878
+  }
+]
