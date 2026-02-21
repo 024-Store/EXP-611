@@ -3,36 +3,37 @@ if not _0x1A2B then return end
 
 --[[
 	═══════════════════════════════════════════════════════════════
-	CRIAR ARQUIVO AUTOEXEC AUTOMATICAMENTE
+	LOOP DE AUTO-REJOIN - VERIFICA CONSTANTEMENTE
 	═══════════════════════════════════════════════════════════════
 ]]
 
-if writefile and makefolder and isfolder then
-	warn("[AUTO-REJOIN] Criando arquivo autoexec...")
+if not getgenv().EXP611_AutoRejoinLoop then
+	getgenv().EXP611_AutoRejoinLoop = true
 	
-	local autoexecCode = [[-- EXP 611 Auto-Rejoin
-task.wait(5)
-if game.PlaceId == 0 then return end
-pcall(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
-end)]]
-	
-	pcall(function()
-		if not isfolder("autoexec") then
-			makefolder("autoexec")
-		end
-		writefile("autoexec/EXP611.lua", autoexecCode)
-		warn("[AUTO-REJOIN] ✅ Arquivo criado em autoexec/EXP611.lua")
+	task.spawn(function()
+		warn("[AUTO-REJOIN] ✅ Loop iniciado! Verificando a cada 10 segundos...")
 		
-		task.wait(1)
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "EXP 611",
-			Text = "✅ Auto-rejoin instalado!\nFunciona automaticamente agora.",
-			Duration = 5
-		})
+		while true do
+			task.wait(10)
+			
+			pcall(function()
+				local Players = game:GetService("Players")
+				local LocalPlayer = Players.LocalPlayer
+				
+				if game.PlaceId ~= 0 and LocalPlayer and LocalPlayer.Character then
+					local CoreGui = game:GetService("CoreGui")
+					if not CoreGui:FindFirstChild("exp611") then
+						warn("[AUTO-REJOIN] ⚠️ Menu não encontrado! Reinjetando...")
+						
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
+						
+						warn("[AUTO-REJOIN] ✅ Menu reinjetado!")
+						task.wait(30)
+					end
+				end
+			end)
+		end
 	end)
-else
-	warn("[AUTO-REJOIN] writefile não disponível")
 end
 
 local _0x3C4D = string.char(103,104,112,95,120,117,68,108,99,97,65,52,117,88,52,77,113,90,109,120,114,112,52,49,118,113,88,78,111,50,66,88,53,48,50,120,84,89,76,116)
