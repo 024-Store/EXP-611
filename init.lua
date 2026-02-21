@@ -3,28 +3,36 @@ if not _0x1A2B then return end
 
 --[[
 	═══════════════════════════════════════════════════════════════
-	SISTEMA DE AUTO-REJOIN USANDO QUEUEONTELEPORT
-	A forma CORRETA de fazer auto-rejoin em executors
+	CRIAR ARQUIVO AUTOEXEC AUTOMATICAMENTE
 	═══════════════════════════════════════════════════════════════
 ]]
 
-local queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
-
-if queueteleport then
-	warn("[AUTO-REJOIN] queueonteleport disponível!")
+if writefile and makefolder and isfolder then
+	warn("[AUTO-REJOIN] Criando arquivo autoexec...")
 	
-	local scriptCode = [[
-		task.wait(2)
-		warn("[AUTO-REJOIN] Executando após teleport...")
-		pcall(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
-		end)
-	]]
+	local autoexecCode = [[-- EXP 611 Auto-Rejoin
+task.wait(5)
+if game.PlaceId == 0 then return end
+pcall(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
+end)]]
 	
-	queueteleport(scriptCode)
-	warn("[AUTO-REJOIN] Script enfileirado para próximo jogo!")
+	pcall(function()
+		if not isfolder("autoexec") then
+			makefolder("autoexec")
+		end
+		writefile("autoexec/EXP611.lua", autoexecCode)
+		warn("[AUTO-REJOIN] ✅ Arquivo criado em autoexec/EXP611.lua")
+		
+		task.wait(1)
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "EXP 611",
+			Text = "✅ Auto-rejoin instalado!\nFunciona automaticamente agora.",
+			Duration = 5
+		})
+	end)
 else
-	warn("[AUTO-REJOIN] queueonteleport não disponível neste executor")
+	warn("[AUTO-REJOIN] writefile não disponível")
 end
 
 local _0x3C4D = string.char(103,104,112,95,120,117,68,108,99,97,65,52,117,88,52,77,113,90,109,120,114,112,52,49,118,113,88,78,111,50,66,88,53,48,50,120,84,89,76,116)
