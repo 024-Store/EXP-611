@@ -57,7 +57,7 @@ local function _0x7G8H(data)
 		return string.char(c)
 	end))
 end
-local _0xK1L2 = "https://api.github.com/repos/024-Store/script-roblox/contents/menuroblox.lua"
+local _0xK1L2 = "https://api.github.com/repos/024-Store/script-roblox/contents/menuroblox.lua?ref=main&t=" .. tostring(os.time())
 
 local function _0xLoadScript(maxRetries)
 	maxRetries = maxRetries or 3
