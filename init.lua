@@ -1,8 +1,7 @@
 -- EXP 611 Loader
--- Usa commit específico para evitar cache
 local urls = {
-	"https://cdn.jsdelivr.net/gh/024-Store/script-roblox@02cac1339c/menuroblox.lua",
-	"https://raw.githubusercontent.com/024-Store/script-roblox/02cac1339c/menuroblox.lua",
+	"https://cdn.jsdelivr.net/gh/024-Store/script-roblox@0988c13fe7/menuroblox.lua",
+	"https://raw.githubusercontent.com/024-Store/script-roblox/0988c13fe7/menuroblox.lua",
 	"https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua?" .. tostring(tick())
 }
 
