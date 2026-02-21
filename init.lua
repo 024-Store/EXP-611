@@ -1,10 +1,9 @@
 -- EXP 611 Loader
--- Tenta múltiplas URLs para evitar cache
-local timestamp = tostring(tick())
+-- Usa commit específico para evitar cache
 local urls = {
-	"https://cdn.jsdelivr.net/gh/024-Store/script-roblox@main/menuroblox.lua?v=" .. timestamp,
-	"https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua?cache=" .. timestamp,
-	"https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua"
+	"https://cdn.jsdelivr.net/gh/024-Store/script-roblox@02cac1339c/menuroblox.lua",
+	"https://raw.githubusercontent.com/024-Store/script-roblox/02cac1339c/menuroblox.lua",
+	"https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua?" .. tostring(tick())
 }
 
 local loaded = false
@@ -13,7 +12,7 @@ for i, url in ipairs(urls) do
 		return game:HttpGet(url, true)
 	end)
 	
-	if success and result and #result > 1000 then
+	if success and result and #result > 100000 then
 		local func, err = loadstring(result)
 		if func then
 			pcall(func)
@@ -22,13 +21,13 @@ for i, url in ipairs(urls) do
 		end
 	end
 	
-	task.wait(0.5)
+	task.wait(1)
 end
 
 if not loaded then
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "EXP 611",
-		Text = "Erro ao carregar. Aguarde alguns minutos e tente novamente.",
-		Duration = 5
+		Text = "Cache do GitHub travado. Aguarde 10 minutos.",
+		Duration = 7
 	})
 end
