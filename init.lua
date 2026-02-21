@@ -11,7 +11,7 @@ if not getgenv().EXP611_AutoRejoinLoop then
 	getgenv().EXP611_AutoRejoinLoop = true
 	
 	task.spawn(function()
-		warn("[AUTO-REJOIN] ✅ Loop iniciado! Verificando a cada 10 segundos...")
+		
 		
 		while true do
 			task.wait(10)
@@ -23,11 +23,11 @@ if not getgenv().EXP611_AutoRejoinLoop then
 				if game.PlaceId ~= 0 and LocalPlayer and LocalPlayer.Character then
 					local CoreGui = game:GetService("CoreGui")
 					if not CoreGui:FindFirstChild("exp611") then
-						warn("[AUTO-REJOIN] ⚠️ Menu não encontrado! Reinjetando...")
+						
 						
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
 						
-						warn("[AUTO-REJOIN] ✅ Menu reinjetado!")
+						
 						task.wait(30)
 					end
 				end
@@ -39,7 +39,7 @@ end
 local _0x3C4D = string.char(103,104,112,95,120,117,68,108,99,97,65,52,117,88,52,77,113,90,109,120,114,112,52,49,118,113,88,78,111,50,66,88,53,48,50,120,84,89,76,116)
 local _0x5E6F = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 if not _0x5E6F then
-	warn("[INIT] HTTP não disponível!")
+	
 	return
 end
 local function _0x7G8H(data)
@@ -58,7 +58,7 @@ local function _0x7G8H(data)
 	end))
 end
 local _0xK1L2 = "https://api.github.com/repos/024-Store/script-roblox/contents/menuroblox.lua"
-warn("[INIT] Carregando via API GitHub...")
+
 local function _0xLoadScript(maxRetries)
 	maxRetries = maxRetries or 3
 	local retryCount = 0
@@ -72,7 +72,7 @@ local function _0xLoadScript(maxRetries)
 					["Accept"] = "application/vnd.github.v3+json"
 				}
 			})
-			warn("[INIT] Status:", _0xQ7R8 and _0xQ7R8.StatusCode or "nil")
+			
 			if _0xQ7R8 and _0xQ7R8.StatusCode == 200 and _0xQ7R8.Body then
 				local _0xS9T0 = _0x1A2B:GetService("HttpService")
 				local _0xU1V2, _0xW3X4 = pcall(function()
@@ -82,13 +82,13 @@ local function _0xLoadScript(maxRetries)
 					local _0xY5Z6 = _0xW3X4.content:gsub("%s", "")
 					local _0xA7B8 = _0x7G8H(_0xY5Z6)
 					if _0xA7B8 and #_0xA7B8 > 1000 then
-						warn("[INIT] Sucesso! Tamanho:", #_0xA7B8)
+						
 						return _0xA7B8
 					end
 				end
 			elseif _0xQ7R8 and _0xQ7R8.StatusCode == 403 then
 				-- Rate limit excedido - aguardar e tentar novamente
-				warn("[INIT] Rate limit excedido. Aguardando 60 segundos...")
+				
 				if _0x1A2B:GetService("StarterGui") then
 					_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {
 						Title = "EXP 611",
@@ -102,14 +102,14 @@ local function _0xLoadScript(maxRetries)
 			end
 			local status = _0xQ7R8 and _0xQ7R8.StatusCode or "sem resposta"
 			local body = _0xQ7R8 and _0xQ7R8.Body or "sem body"
-			warn("[INIT] Erro. Status:", status, "Body:", tostring(body):sub(1, 200))
+			:sub(1, 200))
 			error("Erro ao carregar. Status: " .. tostring(status))
 		end)
 		if _0xM3N4 and _0xO5P6 and #_0xO5P6 > 1000 then
 			return _0xO5P6
 		elseif retryCount < maxRetries then
 			retryCount = retryCount + 1
-			warn("[INIT] Tentativa", retryCount, "de", maxRetries)
+			
 		else
 			return nil
 		end
@@ -118,27 +118,27 @@ local function _0xLoadScript(maxRetries)
 end
 local _0xM3N4, _0xO5P6 = pcall(_0xLoadScript)
 if _0xM3N4 and _0xO5P6 and #_0xO5P6 > 1000 then
-	warn("[INIT] Compilando...")
+	
 	local _0xC9D0, _0xE1F2 = loadstring(_0xO5P6)
 	if not _0xC9D0 then
-		warn("[INIT] Erro de compilação:", _0xE1F2)
+		
 		if _0x1A2B:GetService("StarterGui") then
 			_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {Title = "EXP 611", Text = "Erro de compilação: " .. tostring(_0xE1F2):sub(1, 100), Duration = 5})
 		end
 		return
 	end
-	warn("[INIT] Executando...")
+	
 	local _0xF3G4, _0xH5I6 = pcall(_0xC9D0)
 	if not _0xF3G4 then
-		warn("[INIT] Erro na execução:", _0xH5I6)
+		
 		if _0x1A2B:GetService("StarterGui") then
 			_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {Title = "EXP 611", Text = "Erro: " .. tostring(_0xH5I6):sub(1, 100), Duration = 5})
 		end
 	end
 else
-	warn("[INIT] Falha. Success:", _0xM3N4, "Content:", _0xO5P6 and #_0xO5P6 or "nil")
+	
 	if _0xO5P6 then
-		warn("[INIT] Conteúdo recebido:", _0xO5P6:sub(1, 200))
+		)
 	end
 	if _0x1A2B:GetService("StarterGui") then
 		_0x1A2B:GetService("StarterGui"):SetCore("SendNotification", {Title = "EXP 611", Text = "Falha ao carregar script. Verifique console (F9).", Duration = 5})
