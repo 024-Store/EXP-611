@@ -1,6 +1,6 @@
 -- EXP 611 Loader
 local urls = {
-	"https://pastee.dev/raw/QVYG4wAc",
+	"https://gist.githubusercontent.com/024-Store/0f88a12f5a4f823ec8959e28f0d3c797/raw/menuroblox.lua",
 	"https://raw.githubusercontent.com/024-Store/script-roblox/main/menuroblox.lua"
 }
 
