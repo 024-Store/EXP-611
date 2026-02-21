@@ -3,66 +3,28 @@ if not _0x1A2B then return end
 
 --[[
 	═══════════════════════════════════════════════════════════════
-	SISTEMA DE AUTO-REJOIN
-	Monitora quando você entra em jogos e recarrega o script
+	SISTEMA DE AUTO-REJOIN USANDO QUEUEONTELEPORT
+	A forma CORRETA de fazer auto-rejoin em executors
 	═══════════════════════════════════════════════════════════════
 ]]
 
--- Iniciar sistema de monitoramento (apenas uma vez)
-if not getgenv or not getgenv().EXP611_MonitorActive then
-	if getgenv then
-		getgenv().EXP611_MonitorActive = true
-	end
+local queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
+
+if queueteleport then
+	warn("[AUTO-REJOIN] queueonteleport disponível!")
 	
-	warn("[AUTO-REJOIN] Sistema de monitoramento iniciado!")
+	local scriptCode = [[
+		task.wait(2)
+		warn("[AUTO-REJOIN] Executando após teleport...")
+		pcall(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
+		end)
+	]]
 	
-	task.spawn(function()
-		local Players = game:GetService("Players")
-		local LocalPlayer = Players.LocalPlayer
-		local currentPlaceId = game.PlaceId
-		
-		-- Função para recarregar o script
-		local function reloadScript(reason)
-			-- Verificar se o menu já existe
-			local CoreGui = game:GetService("CoreGui")
-			if CoreGui:FindFirstChild("exp611") then
-				warn("[AUTO-REJOIN] Menu já existe, pulando")
-				return
-			end
-			
-			warn("[AUTO-REJOIN] " .. reason)
-			warn("[AUTO-REJOIN] Recarregando script...")
-			
-			task.wait(3)
-			
-			local success, err = pcall(function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/024-Store/EXP-611/main/init.lua", true))()
-			end)
-			
-			if success then
-				warn("[AUTO-REJOIN] ✅ Script recarregado!")
-			else
-				warn("[AUTO-REJOIN] ❌ Erro:", err)
-			end
-		end
-		
-		-- Monitorar mudanças de PlaceId
-		game:GetPropertyChangedSignal("PlaceId"):Connect(function()
-			if game.PlaceId ~= 0 and game.PlaceId ~= currentPlaceId then
-				warn("[AUTO-REJOIN] Novo jogo detectado! PlaceId:", game.PlaceId)
-				currentPlaceId = game.PlaceId
-				reloadScript("Mudou de jogo")
-			end
-		end)
-		
-		-- Monitorar quando o personagem spawna
-		LocalPlayer.CharacterAdded:Connect(function(character)
-			warn("[AUTO-REJOIN] Personagem spawnado!")
-			reloadScript("Personagem spawnado")
-		end)
-		
-		warn("[AUTO-REJOIN] Monitoramento ativo!")
-	end)
+	queueteleport(scriptCode)
+	warn("[AUTO-REJOIN] Script enfileirado para próximo jogo!")
+else
+	warn("[AUTO-REJOIN] queueonteleport não disponível neste executor")
 end
 
 local _0x3C4D = string.char(103,104,112,95,120,117,68,108,99,97,65,52,117,88,52,77,113,90,109,120,114,112,52,49,118,113,88,78,111,50,66,88,53,48,50,120,84,89,76,116)
