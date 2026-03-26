@@ -1,1 +1,10 @@
-[{"userName":"JuanJulio26","tagColor":[255,255,255],"iconId":75165210157435,"timestamp":1772255799,"userId":261707832,"tagName":"User"}]
+[
+  {
+    "userId": 261707832,
+    "userName": "JuanJulio26",
+    "tagName": "User",
+    "tagColor": [255, 255, 255],
+    "iconId": 75165210157435,
+    "timestamp": 1772255799
+  }
+]
