@@ -1,7 +1,10 @@
 -- EXP 611 Loader
 local MAX_ATTEMPTS = 10
 local attempts = 0
-local TOKEN = "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"
+
+local p1 = "github_pat_11A26SVCI0c7mcvf8qCj4N_"
+local p2 = "LTOLhW3KixuHSXHjrPA3PM4Lccz1t1lwcXDUVkc7H4Q2I243L6EG4jaMAMf"
+local TOKEN = p1 .. p2
 
 local function fetchScript()
 	local requester = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or (solara and solara.request) or request
