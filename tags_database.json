@@ -1,50 +1,10 @@
 [
   {
-    "userId": 78457991,
-    "userName": "Snel1712",
-    "tagName": "User",
-    "tagColor": [255, 255, 255],
-    "iconId": 75165210157435,
-    "timestamp": 1775839428
-  },
-  {
     "userId": 261707832,
     "userName": "JuanJulio26",
     "tagName": "Dono",
     "tagColor": [0, 0, 0],
     "iconId": 75165210157435,
-    "timestamp": 1775837634
-  },
-  {
-    "userId": 4111134349,
-    "userName": "Rafaa90x",
-    "tagName": "User",
-    "tagColor": [255, 255, 255],
-    "iconId": 75165210157435,
-    "timestamp": 1775837634
-  },
-  {
-    "userId": 6154717768,
-    "userName": "ygenisx",
-    "tagName": "User",
-    "tagColor": [255, 255, 255],
-    "iconId": 75165210157435,
-    "timestamp": 1775936357
-  },
-  {
-    "userId": 10492430655,
-    "userName": "myspiritlover",
-    "tagName": "User",
-    "tagColor": [255, 255, 255],
-    "iconId": 75165210157435,
-    "timestamp": 1775852018
-  },
-  {
-    "userId": 10809224672,
-    "userName": "xeidiodio001",
-    "tagName": "User",
-    "tagColor": [255, 255, 255],
-    "iconId": 75165210157435,
-    "timestamp": 1775947385
+    "timestamp": 1776289500
   }
 ]
